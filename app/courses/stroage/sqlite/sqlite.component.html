@@ -1,5 +1,7 @@
 <ActionBar title="Sqlite">
     <ActionItem text="刷新" ios.position="right" (tap)="fetchPersons()"></ActionItem>
+    <ActionItem text="首页" ios.position="right" [nsRouterLink]="['/courses']" pageTransition="flipRight"
+                clearHistory="true"></ActionItem>
 </ActionBar>
 
 <GridLayout rows="auto *" class="p-20">
