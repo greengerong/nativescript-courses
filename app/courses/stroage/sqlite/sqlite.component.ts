@@ -12,8 +12,12 @@ export class SqliteComponent implements OnInit {
     db: any;
 
     ngOnInit(): void {
-        new Sqlite('person_db').then(db => {
-            db.execSQL('CREATE TABLE IF NOT EXISTS persons (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age TEXT)')
+        if (!Sqlite.exists('person.db.sqlite')) {
+            Sqlite.copyDatabase('person.db.sqlite');
+        }
+
+        new Sqlite('person.db.sqlite').then(db => {
+            db.execSQL('CREATE TABLE IF NOT EXISTS persons (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER)')
                 .then(() => {
                     this.db = db;
                     console.log("create table person success");
@@ -54,7 +58,7 @@ export class SqliteComponent implements OnInit {
             .then((result) => {
                 this.persons = result;
             }, (err) => {
-                console.error("insert person error", err);
+                console.error("fetch person error", err);
             })
     }
 
