@@ -3,7 +3,7 @@ import { NativeScriptRouterModule } from 'nativescript-angular';
 
 import { AppComponent } from "./app.component";
 import { appRoutes } from './app.route';
-import { CoursesComponent, CoursesModule } from './courses';
+import { CoursesModule } from './courses';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
 
