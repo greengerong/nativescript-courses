@@ -8,12 +8,12 @@ export class AnimationsCoursesComponent {
     title = 'Animations';
     courses = [
         {
-            title: 'View Element Animations',
-            link: '/animations/view'
-        },
-        {
             title: 'Route Animations',
             link: '/animations/route'
+        },
+        {
+            title: 'View Element Animations',
+            link: '/animations/view'
         }
     ];
 
