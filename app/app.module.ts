@@ -3,11 +3,12 @@ import { NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule }
 
 import { AppComponent } from "./app.component";
 import { appRoutes } from './app.route';
-import { SqliteComponent } from './courses';
+import { SqliteComponent, CoursesComponent } from './courses';
 
 @NgModule({
     declarations: [
         AppComponent,
+        CoursesComponent,
         SqliteComponent
     ],
     bootstrap: [

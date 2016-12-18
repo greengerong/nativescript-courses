@@ -1,16 +1,20 @@
-import { SqliteComponent } from './courses';
+import { SqliteComponent, CoursesComponent } from './courses';
 import { path } from 'file-system';
 
 
 export const appRoutes = [
     {
         path: "",
-        redirectTo: "/courses/sqlite",
+        redirectTo: "/courses",
         pathMatch: "full",
 
     },
     {
         path: "courses",
+        component: CoursesComponent,
+    },
+    {
+        path: 'stroage',
         children: [
             {
                 path: "sqlite",
