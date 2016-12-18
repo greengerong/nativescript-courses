@@ -1,10 +1,11 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule } from 'nativescript-angular';
+import { NativeScriptRouterModule } from 'nativescript-angular';
 
 import { AppComponent } from "./app.component";
 import { appRoutes } from './app.route';
 import { CoursesComponent, StroageModule } from './courses';
 import { CoreModule } from './core';
+import { SharedModule } from './shared';
 
 @NgModule({
     declarations: [
@@ -15,11 +16,9 @@ import { CoreModule } from './core';
         AppComponent
     ],
     imports: [
-        NativeScriptModule,
-        NativeScriptFormsModule,
-        NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(appRoutes),
         CoreModule,
+        SharedModule,
         StroageModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
