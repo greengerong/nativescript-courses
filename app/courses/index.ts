@@ -1,2 +1,2 @@
-export * from './sqlite';
+export * from './stroage';
 export * from './courses.component';

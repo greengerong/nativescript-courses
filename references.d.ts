@@ -4,3 +4,4 @@ declare module 'nativescript-sqlite' {
 
 }
 declare const Sqlite: any;
+declare var System: any;

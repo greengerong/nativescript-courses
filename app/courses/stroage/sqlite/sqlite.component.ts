@@ -3,8 +3,8 @@ const Sqlite = require('nativescript-sqlite');
 
 @Component({
     selector: "my-app",
-    templateUrl: 'courses/sqlite/sqlite.component.html',
-    styleUrls: ['courses/sqlite/sqlite.component.css']
+    templateUrl: 'courses/stroage/sqlite/sqlite.component.html',
+    styleUrls: ['courses/stroage/sqlite/sqlite.component.css']
 })
 export class SqliteComponent implements OnInit {
     persons: any[] = [];

@@ -1,6 +1,4 @@
 import { SqliteComponent, CoursesComponent } from './courses';
-import { path } from 'file-system';
-
 
 export const appRoutes = [
     {
@@ -13,13 +11,4 @@ export const appRoutes = [
         path: "courses",
         component: CoursesComponent,
     },
-    {
-        path: 'stroage',
-        children: [
-            {
-                path: "sqlite",
-                component: SqliteComponent
-            }
-        ]
-    }
 ];

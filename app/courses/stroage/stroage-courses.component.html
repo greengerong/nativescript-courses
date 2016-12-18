@@ -1,0 +1,10 @@
+<ActionBar title="Stroage">
+
+</ActionBar>
+<ListView [items]="courses" class="list-group">
+    <template let-item="item">
+        <GridLayout [nsRouterLink]="item.link" pageTransition="flipRight" class="list-group-item">
+            <Label [text]="item.title" class="list-group-item-heading"></Label>
+        </GridLayout>
+    </template>
+</ListView>

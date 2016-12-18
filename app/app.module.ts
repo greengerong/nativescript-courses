@@ -3,13 +3,13 @@ import { NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule }
 
 import { AppComponent } from "./app.component";
 import { appRoutes } from './app.route';
-import { SqliteComponent, CoursesComponent } from './courses';
+import { CoursesComponent, StroageModule } from './courses';
+import { CoreModule } from './core';
 
 @NgModule({
     declarations: [
         AppComponent,
         CoursesComponent,
-        SqliteComponent
     ],
     bootstrap: [
         AppComponent
@@ -19,6 +19,8 @@ import { SqliteComponent, CoursesComponent } from './courses';
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(appRoutes),
+        CoreModule,
+        StroageModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })
