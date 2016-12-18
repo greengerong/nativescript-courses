@@ -18,13 +18,25 @@
             </StackLayout>
         </GridLayout>
     </StackLayout>
-    <ScrollView row="1">
-        <ListView class="list-group" [items]="persons">
-            <template let-person="item">
-                <StackLayout class="list-group-item">
-                    <Label class="list-group-item-heading" [text]="person.name + '  ' + person.age"></Label>
-                </StackLayout>
-            </template>
-        </ListView>
-    </ScrollView>
+    <GridLayout row="1" rows="auto *" class="p-20">
+        <GridLayout row="0" rows="auto" columns="* * * *" class="list-group-item text-center">
+            <Label row="0" col="0" class="list-group-item-text" text="编号"></Label>
+            <Label row="0" col="1" class="list-group-item-text" text="姓名"></Label>
+            <Label row="0" col="2" class="list-group-item-text" text="年龄"></Label>
+            <Label row="0" col="3" class="list-group-item-text" text="操作"></Label>
+        </GridLayout>
+        <ScrollView row="1">
+            <ListView class="list-group" [items]="persons">
+                <template let-person="item">
+                    <GridLayout rows="auto" columns="auto * auto auto" class="list-group-item text-center">
+                        <Label row="0" col="0" class="list-group-item-text" [text]="person.id"></Label>
+                        <Label row="0" col="1" class="list-group-item-text" [text]="person.name"></Label>
+                        <Label row="0" col="2" class="list-group-item-text" [text]="person.age"></Label>
+                        <Button row="0" col="3" class="btn btn-outline pull-right" text="删除"
+                                (tap)="removePerson(person.id)"></Button>
+                    </GridLayout>
+                </template>
+            </ListView>
+        </ScrollView>
+    </GridLayout>
 </GridLayout>

@@ -40,7 +40,6 @@ export class SqliteComponent implements OnInit {
     fetchPersons() {
         this.db.all('SELECT id, name, age FROM persons')
             .then(rows => {
-                console.log("get rows", rows);
                 return rows.map(function (row) {
                     return {
                         id: row[0],
@@ -54,6 +53,17 @@ export class SqliteComponent implements OnInit {
             }, (err) => {
                 console.error("insert person error", err);
             })
+    }
+
+    removePerson(id) {
+        console.log("delete person with id ", id);
+        this.db.execSQL('DELETE FROM persons where id = ?', [id])
+            .then((effect) => {
+                console.log(`delete person[${id}] success with effect count:`, effect);
+                this.persons = this.persons.filter(item => item.id !== id);
+            }, (err) => {
+                console.error(`delete person[${id}] error`, err);
+            });
     }
 
 }
