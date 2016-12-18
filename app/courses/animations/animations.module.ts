@@ -3,6 +3,7 @@ import { NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule }
 
 import { AnimationsCoursesComponent } from './animations.component';
 import { ViewAnimationsComponent } from './view-animations';
+import { RouteAnimationsComponent } from './route-animations';
 import { SharedModule } from '../../shared';
 
 const appRoutes = [
@@ -16,6 +17,10 @@ const appRoutes = [
             {
                 path: "view",
                 component: ViewAnimationsComponent
+            },
+            {
+                path: "route",
+                component: RouteAnimationsComponent
             }
         ]
     }];
@@ -23,7 +28,8 @@ const appRoutes = [
 @NgModule({
     declarations: [
         AnimationsCoursesComponent,
-        ViewAnimationsComponent
+        ViewAnimationsComponent,
+        RouteAnimationsComponent
     ],
     imports: [
         NativeScriptModule,

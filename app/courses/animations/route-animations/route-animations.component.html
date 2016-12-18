@@ -1,0 +1,14 @@
+<ActionBar title="Route Animations">
+    <ActionItem text="首页" ios.position="right" [nsRouterLink]="['/courses']" pageTransition="flipRight"
+                clearHistory="true"></ActionItem>
+</ActionBar>
+<ScrollView>
+    <GridLayout rows="auto auto auto" class="p-20 list-group">
+        <ListPicker #picker row="0" [items]="animations" [(ngModel)]="selectedIndex"
+                    (selectedIndexChange)="selectedIndexChange()">
+        </ListPicker>
+
+        <Button row="1" class="btn btn-primary btn-rounded-lg"
+                text="Go route animation" (tap)="gotoPage()"></Button>
+    </GridLayout>
+</ScrollView>

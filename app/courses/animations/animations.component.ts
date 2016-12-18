@@ -10,6 +10,10 @@ export class AnimationsCoursesComponent {
         {
             title: 'View Element Animations',
             link: '/animations/view'
+        },
+        {
+            title: 'Route Animations',
+            link: '/animations/route'
         }
     ];
 
