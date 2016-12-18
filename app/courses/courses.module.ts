@@ -4,6 +4,7 @@ import { NativeScriptRouterModule } from 'nativescript-angular';
 
 import { SharedModule } from '../shared';
 import { StroageModule } from './stroage';
+import { AnimationsModule } from './animations';
 import { CoursesComponent } from './courses.component';
 
 const appRoutes = [
@@ -21,7 +22,8 @@ const appRoutes = [
     imports: [
         SharedModule,
         NativeScriptRouterModule.forRoot(appRoutes),
-        StroageModule
+        StroageModule,
+        AnimationsModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

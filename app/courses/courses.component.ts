@@ -9,5 +9,9 @@ export class CoursesComponent {
     courses = [{
         title: 'Stroage',
         link: '/stroage',
-    }];
+    },
+        {
+            title: 'Animations',
+            link: '/animations',
+        }];
 }
