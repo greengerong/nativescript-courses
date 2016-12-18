@@ -3,14 +3,13 @@ import { NativeScriptRouterModule } from 'nativescript-angular';
 
 import { AppComponent } from "./app.component";
 import { appRoutes } from './app.route';
-import { CoursesComponent, StroageModule } from './courses';
+import { CoursesComponent, CoursesModule } from './courses';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
 
 @NgModule({
     declarations: [
         AppComponent,
-        CoursesComponent,
     ],
     bootstrap: [
         AppComponent
@@ -19,7 +18,7 @@ import { SharedModule } from './shared';
         NativeScriptRouterModule.forRoot(appRoutes),
         CoreModule,
         SharedModule,
-        StroageModule
+        CoursesModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

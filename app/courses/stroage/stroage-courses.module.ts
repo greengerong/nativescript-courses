@@ -5,7 +5,7 @@ import { SqliteComponent } from './sqlite';
 import { StroageCoursesComponent } from './stroage-courses.component';
 import { SharedModule } from '../../shared';
 
-export const appRoutes = [
+const appRoutes = [
     {
         path: 'stroage',
         children: [

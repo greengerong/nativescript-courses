@@ -28,7 +28,7 @@ export class SqliteComponent implements OnInit {
         if (!this.model.name) {
             return;
         }
-        console.log("data model is", this.model);
+        console.log("data model is", JSON.stringify(this.model));
         this.db.execSQL('INSERT INTO persons (name, age) VALUES (?, ?)', [this.model.name, this.model.age])
             .then((id) => {
                 console.log("insert person success with id:", id);

@@ -2,9 +2,10 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "stroage-courses",
-    templateUrl: 'courses/stroage/stroage-courses.component.html',
+    template: '<courses-list [courses]="courses" [title]="title"></courses-list>',
 })
 export class StroageCoursesComponent {
+    title = 'Stroage';
     courses = [
         {
             title: 'Sqlite',
