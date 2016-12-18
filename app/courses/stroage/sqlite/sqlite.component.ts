@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 const Sqlite = require('nativescript-sqlite');
 
 @Component({
-    selector: "my-app",
+    selector: "sqlite",
     templateUrl: 'courses/stroage/sqlite/sqlite.component.html',
     styleUrls: ['courses/stroage/sqlite/sqlite.component.css']
 })
