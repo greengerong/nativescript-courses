@@ -1,9 +1,10 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule } from 'nativescript-angular';
 
 import { SqliteComponent } from './sqlite';
 import { StroageCoursesComponent } from './stroage-courses.component';
 import { SharedModule } from '../../shared';
+import { ApplicationSettingsComponent } from './application-settings';
 
 const appRoutes = [
     {
@@ -16,6 +17,10 @@ const appRoutes = [
             {
                 path: "sqlite",
                 component: SqliteComponent
+            },
+            {
+                path: "applicationSettings",
+                component: ApplicationSettingsComponent
             }
         ]
     }];
@@ -23,7 +28,8 @@ const appRoutes = [
 @NgModule({
     declarations: [
         SqliteComponent,
-        StroageCoursesComponent
+        StroageCoursesComponent,
+        ApplicationSettingsComponent
     ],
     imports: [
         NativeScriptModule,

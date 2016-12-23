@@ -10,6 +10,10 @@ export class StroageCoursesComponent {
         {
             title: 'Sqlite',
             link: '/stroage/sqlite'
+        },
+        {
+            title: 'Application Settings',
+            link: '/stroage/applicationSettings'
         }
     ];
 
