@@ -5,8 +5,8 @@ import { TouchGestureEventData } from 'ui/gestures';
 
 @Component({
     selector: 'draggable',
-    templateUrl: 'courses/draggable/draggable.component.html',
-    styleUrls: ['courses/draggable/draggable.component.css']
+    templateUrl: 'courses/gestures/draggable/draggable.component.html',
+    styleUrls: ['courses/gestures/draggable/draggable.component.css']
 })
 export class DraggableComponent {
 
@@ -16,7 +16,7 @@ export class DraggableComponent {
     dragChange(arg: TouchGestureEventData) {
         console.log(`Touch move event with x=${arg.getX()}; y=${arg.getY()}.`);
         let label: Label = this.draggable.nativeElement;
-        AbsoluteLayout.setLeft(label, arg.getX() - label.getMeasuredWidth() / 2);
-        AbsoluteLayout.setTop(label, arg.getY() - label.getMeasuredHeight() / 2);
+        AbsoluteLayout.setLeft(label, arg.getX() - 50);
+        AbsoluteLayout.setTop(label, arg.getY() - 50);
     }
 }
