@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThreeDeeTouch } from "nativescript-3dtouch";
+import { alert } from 'ui/dialogs'
 
 const threeDeeTouch = new ThreeDeeTouch();
 
@@ -16,11 +17,23 @@ export class ThreeDTouchComponent implements OnInit {
 
     dynamic3DTouch() {
         threeDeeTouch.available().then((available) => {
-            if (available) {
-                console.log("This device is 3D Touch capable");
-            } else {
-                console.log("No 3D Touch capability, ask the user to upgrade");
+            if (!available) {
+                alert("No 3D Touch capability, ask the user to upgrade");
+                return;
             }
+
+            threeDeeTouch.configureQuickActions([
+                {
+                    type: "learnTouch",
+                    title: "3DTouch(TS)",
+                    subtitle: "Learn 3D Touch with NS",
+                    iconTemplate: 'Eye'
+                }
+            ]).then(() => {
+                alert("This device is 3D Touch capable. Success add action.");
+            }, (errorMessage) => {
+                alert(errorMessage);
+            });
         });
     }
 

@@ -43,5 +43,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Eye</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>3DTouch(plist)</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Learn 3D Touch with NS</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>learnTouch</string>
+		</dict>
+	</array>
 </dict>
 </plist>

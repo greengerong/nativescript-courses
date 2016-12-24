@@ -6,3 +6,5 @@ declare module 'nativescript-sqlite' {
 }
 declare const Sqlite: any;
 declare var System: any;
+
+declare const UIApplicationShortcutIconType: any;
