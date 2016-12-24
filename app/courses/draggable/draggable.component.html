@@ -1,0 +1,8 @@
+<ActionBar title="Draggable">
+    <ActionItem text="首页" ios.position="right" [nsRouterLink]="['/courses']" pageTransition="flipRight"
+                clearHistory="true"></ActionItem>
+</ActionBar>
+
+<AbsoluteLayout width="100%" #absLayout (touch)="dragChange($event)">
+    <Label #draggable text="drag me" class="draggable"></Label>
+</AbsoluteLayout>

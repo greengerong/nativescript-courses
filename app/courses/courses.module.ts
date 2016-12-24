@@ -7,6 +7,7 @@ import { StroageModule } from './stroage';
 import { AnimationsModule } from './animations';
 import { CoursesComponent } from './courses.component';
 import { TreeDTouchModule } from './3dtouch';
+import { DraggableModule } from './draggable';
 
 const appRoutes = [
     {
@@ -25,7 +26,8 @@ const appRoutes = [
         NativeScriptRouterModule.forRoot(appRoutes),
         StroageModule,
         AnimationsModule,
-        TreeDTouchModule
+        TreeDTouchModule,
+        DraggableModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

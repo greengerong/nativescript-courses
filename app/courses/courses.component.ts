@@ -18,6 +18,10 @@ export class CoursesComponent {
         {
             title: 'IOS 3D Touch',
             link: '/3dtouch'
+        },
+        {
+            title: 'Draggable',
+            link: '/draggable'
         }
     ];
 }

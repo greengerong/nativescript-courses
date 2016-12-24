@@ -9,15 +9,11 @@ const appRoutes = [
         path: '3dtouch',
         children: [
             {
-                path: '',
-                children: [
-                    {
-                        path: "",
-                        component: ThreeDTouchComponent
-                    },
-                ]
-            }
+                path: "",
+                component: ThreeDTouchComponent
+            },
         ]
+
     }];
 
 @NgModule({
