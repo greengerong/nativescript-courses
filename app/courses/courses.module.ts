@@ -7,7 +7,7 @@ import { StroageModule } from './stroage';
 import { AnimationsModule } from './animations';
 import { CoursesComponent } from './courses.component';
 import { TreeDTouchModule } from './3dtouch';
-import { DraggableModule } from './draggable';
+import { GesturesCoursesModule } from './gestures';
 
 const appRoutes = [
     {
@@ -27,7 +27,7 @@ const appRoutes = [
         StroageModule,
         AnimationsModule,
         TreeDTouchModule,
-        DraggableModule
+        GesturesCoursesModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

@@ -20,8 +20,8 @@ export class CoursesComponent {
             link: '/3dtouch'
         },
         {
-            title: 'Draggable',
-            link: '/draggable'
+            title: 'Gestures',
+            link: '/gestures'
         }
     ];
 }
