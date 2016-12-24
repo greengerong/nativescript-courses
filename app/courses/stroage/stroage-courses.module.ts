@@ -32,9 +32,6 @@ const appRoutes = [
         ApplicationSettingsComponent
     ],
     imports: [
-        NativeScriptModule,
-        NativeScriptFormsModule,
-        NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(appRoutes),
         SharedModule
     ]

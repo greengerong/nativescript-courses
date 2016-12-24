@@ -1,0 +1,10 @@
+<ActionBar title="IOS 3D Touch">
+    <ActionItem text="首页" ios.position="right" [nsRouterLink]="['/courses']" pageTransition="flipRight"
+                clearHistory="true"></ActionItem>
+</ActionBar>
+
+<StackLayout>
+    <Button (tap)="dynamic3DTouch()" class="btn btn-primary btn-rounded-lg" text="添加3D Touch"></Button>
+</StackLayout>
+
+

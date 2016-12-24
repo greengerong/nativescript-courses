@@ -6,6 +6,7 @@ import { SharedModule } from '../shared';
 import { StroageModule } from './stroage';
 import { AnimationsModule } from './animations';
 import { CoursesComponent } from './courses.component';
+import { TreeDTouchModule } from './3dtouch';
 
 const appRoutes = [
     {
@@ -23,7 +24,8 @@ const appRoutes = [
         SharedModule,
         NativeScriptRouterModule.forRoot(appRoutes),
         StroageModule,
-        AnimationsModule
+        AnimationsModule,
+        TreeDTouchModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

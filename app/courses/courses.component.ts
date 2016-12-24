@@ -6,12 +6,18 @@ import { Component } from "@angular/core";
 })
 export class CoursesComponent {
     title = '案例';
-    courses = [{
-        title: 'Stroage',
-        link: '/stroage',
-    },
+    courses = [
+        {
+            title: 'Stroage',
+            link: '/stroage'
+        },
         {
             title: 'Animations',
-            link: '/animations',
-        }];
+            link: '/animations'
+        },
+        {
+            title: 'IOS 3D Touch',
+            link: '/3dtouch'
+        }
+    ];
 }
