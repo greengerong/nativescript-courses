@@ -8,6 +8,7 @@ import { AnimationsModule } from './animations';
 import { CoursesComponent } from './courses.component';
 import { TreeDTouchModule } from './3dtouch';
 import { GesturesCoursesModule } from './gestures';
+import { FontIconModule } from './font-icon';
 
 const appRoutes = [
     {
@@ -27,7 +28,8 @@ const appRoutes = [
         StroageModule,
         AnimationsModule,
         TreeDTouchModule,
-        GesturesCoursesModule
+        GesturesCoursesModule,
+        FontIconModule
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })

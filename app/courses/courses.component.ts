@@ -22,6 +22,10 @@ export class CoursesComponent {
         {
             title: 'Gestures',
             link: '/gestures'
+        },
+        {
+            title: 'Font icon',
+            link: '/font-icon'
         }
     ];
 }
