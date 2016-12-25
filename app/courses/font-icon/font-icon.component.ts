@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FontIcon } from '../../core';
 
 @Component({
     selector: 'font-icon',
@@ -6,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['courses/font-icon/font-icon.component.css']
 })
 export class FontIconComponent implements OnInit {
+    icons = [];
 
-    constructor() {
+    constructor(private fontIcon: FontIcon) {
 
+        this.icons = fontIcon.getAllIcon()
+            .map(icon => {
+                return {
+                    key: icon,
+                    value: fontIcon.getIconValue(icon)
+                };
+            });
     }
 
     ngOnInit() {
