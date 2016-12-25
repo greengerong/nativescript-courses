@@ -11,16 +11,10 @@ export class FontIconComponent implements OnInit {
 
     constructor(private fontIcon: FontIcon) {
 
-        this.icons = fontIcon.getAllIcon()
-            .map(icon => {
-                return {
-                    key: icon,
-                    value: fontIcon.getIconValue(icon)
-                };
-            });
     }
 
     ngOnInit() {
+        this.icons = this.fontIcon.getAllIcon();
     }
 
 }

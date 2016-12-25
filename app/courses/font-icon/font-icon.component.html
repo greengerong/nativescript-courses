@@ -5,8 +5,8 @@
 <ScrollView>
     <WrapLayout>
         <StackLayout class="p-8" *ngFor="let icon of icons">
-            <Label class="label" [text]="icon.key"></Label>
-            <Label [text]="icon.key | fa" class="fa"></Label>
+            <Label class="label" [text]="icon"></Label>
+            <Label [text]="icon | fa" class="fa"></Label>
         </StackLayout>
     </WrapLayout>
 </ScrollView>
