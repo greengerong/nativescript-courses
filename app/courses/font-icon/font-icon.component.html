@@ -6,7 +6,7 @@
     <WrapLayout>
         <StackLayout class="p-8" *ngFor="let icon of icons">
             <Label class="label" [text]="icon.key"></Label>
-            <Label [text]="icon.value" class="fa"></Label>
+            <Label [text]="icon.key | fa" class="fa"></Label>
         </StackLayout>
     </WrapLayout>
 </ScrollView>

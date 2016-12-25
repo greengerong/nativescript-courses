@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { NativeScriptModule, NativeScriptFormsModule, NativeScriptRouterModule } from 'nativescript-angular';
 import { CoursesListComponent } from './courses-list';
+import { FontIconPipe } from '../core/font-icon';
 
 @NgModule({
     imports: [
@@ -9,13 +10,15 @@ import { CoursesListComponent } from './courses-list';
         NativeScriptRouterModule,
     ],
     declarations: [
-        CoursesListComponent
+        CoursesListComponent,
+        FontIconPipe
     ],
     exports: [
         NativeScriptModule,
         NativeScriptRouterModule,
         NativeScriptFormsModule,
-        CoursesListComponent
+        CoursesListComponent,
+        FontIconPipe
     ]
 })
 export class SharedModule {

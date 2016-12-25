@@ -703,3 +703,23 @@ export class FontIcon {
         return Object.keys(this.fontAwesomeIcons);
     }
 }
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+    name: 'fa'
+})
+
+@Injectable()
+export class FontIconPipe implements PipeTransform {
+
+    constructor(private fontIcon: FontIcon) {
+
+    }
+
+    transform(value: any, args: any[]): any {
+        if (value) {
+            return this.fontIcon.getIconValue(value);
+        }
+    }
+}
