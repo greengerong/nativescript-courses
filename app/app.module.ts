@@ -27,6 +27,7 @@ const threeDeeTouch = new ThreeDeeTouch();
 })
 export class AppModule {
     constructor(private router: Router) {
+        // github issue: https://github.com/EddyVerbruggen/nativescript-3dtouch/issues/1#issuecomment-269878132
         threeDeeTouch.setQuickActionCallback((shortcutItem) => {
             console.log(`app was launched by shortcut type '${shortcutItem.type}' with title '${shortcutItem.localizedTitle}'`);
             if (shortcutItem.type === "learnTouch") {
