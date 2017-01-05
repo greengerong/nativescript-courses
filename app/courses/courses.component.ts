@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "courses-overview",
-    template: '<courses-list [courses]="courses" [title]="title"></courses-list>',
+    template: '<courses-list [courses]="courses" [title]="title" [hideBackAndroidButton]="true"></courses-list>',
 })
 export class CoursesComponent {
     title = '案例';

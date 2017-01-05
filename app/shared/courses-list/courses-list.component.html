@@ -1,5 +1,6 @@
 <ActionBar [title]="title">
-
+    <NavigationButton text="Go Back" *ngIf="!hideBackAndroidButton" android.systemIcon="ic_menu_back"
+                      (tap)="routeBack()"></NavigationButton>
 </ActionBar>
 <ListView [items]="courses" class="list-group">
     <template let-item="item">
